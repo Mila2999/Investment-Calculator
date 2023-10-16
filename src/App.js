@@ -4,12 +4,12 @@ import ResultTable from './components/ResultsTable/ResultsTable';
 import UserInput from './components/UserInput/UserInput';
 
 function App() {
-  const [results, setResults] = useState(null);
+  const [userInput, setUserInput] = useState(null);
   const calculateHandler = (userInput) => {
-    // Should be triggered when form is submitted
-
-    const yearlyData = []; // per-year results
-
+    setUserInput(userInput);
+  };
+  const yearlyData = []; // per-year results
+  if (userInput) {
     let currentSavings = +userInput['current-savings'];
     const yearlyContribution = +userInput['yearly-contribution'];
     const expectedReturn = +userInput['expected-return'] / 100;
@@ -26,10 +26,7 @@ function App() {
         yearlyContribution: yearlyContribution,
       });
     }
-
-    setResults(yearlyData);
-  };
-
+  }
   return (
     <div>
       <Header />

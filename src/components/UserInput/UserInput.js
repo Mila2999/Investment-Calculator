@@ -16,7 +16,6 @@ const UserInput = (props) => {
   };
   const resetHandler = (event) => {
     setUserInput(initialUserInput);
-    console.log('RESET');
   };
   const inputChangesHandler = (input, value) => {
     setUserInput((prevInput) => {
@@ -25,7 +24,6 @@ const UserInput = (props) => {
         [input]: value,
       };
     });
-    console.log(input, value);
   };
   return (
     <form onSubmit={submitHandler} className="form">
