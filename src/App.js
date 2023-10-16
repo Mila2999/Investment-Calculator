@@ -43,3 +43,11 @@ function App() {
 }
 
 export default App;
+
+//*You'll need to listen to three main kinds of events:
+
+//Form submission
+
+//Reset button being clicked
+
+//User input changing (in the various <input /> fields) */
